@@ -12,6 +12,8 @@ class BooksController < ApplicationController
       @books = Book.latest
     elsif params[:rate_count]
       @books = Book.rate_count
+    elsif params[:tag]
+        @books = Book.tag
     else
       @books = Book.all
     end
